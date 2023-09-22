@@ -55,9 +55,3 @@ fn dice_roll(x: i32) {
         other => { println!("{other}") }
     }
 }
-
-fn diff(x: i32) {
-    match {
-        let x1 = (1 < x < 5); x1 => { println!() }
-    }
-}
