@@ -1,3 +1,7 @@
+use crate::doc::link;
+
+mod doc;
+
 fn main() {
-    println!("Hello, {}!", "Dima");
+    link::exm_link(&String::from("Hello!"), &mut String::from("mut"));
 }
