@@ -2,27 +2,19 @@
 /// в зависимости от того, какой из шаблонов совпал
 ///
 
-/// if let обрабатывает только один шаблон
-fn if_let_exm(x: Some(u8)) -> bool {
-    if let Some(z) = x {
-        true;
-    }
-    false
-}
-
-enum Coin {
+pub enum Coin {
     Penny,
     Nickel,
     Dime,
     Quarter,
 }
 
-enum RandomNumber {
+pub enum RandomNumber {
     Integer(i32),
     Long(i64),
 }
 
-fn value_in_cents(coin: Coin) -> u8 {
+pub fn value_in_cents(coin: Coin) -> u8 {
     match coin {
         Coin::Penny => 1,
         Coin::Nickel => 5,
@@ -31,7 +23,7 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 
-fn luck_number(number: RandomNumber) -> bool {
+pub fn luck_number(number: RandomNumber) -> bool {
     match number {
         RandomNumber::Integer(777) => true,
         RandomNumber::Integer(11) => true,
@@ -41,17 +33,33 @@ fn luck_number(number: RandomNumber) -> bool {
     }
 }
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
+pub fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
         Some(i) => Some(i + 1),
     }
 }
 
-fn dice_roll(x: i32) {
+pub fn dice_roll(x: i32) {
     match x {
-        1 => { println!("crit miss") }
-        20 => { println!("crit") }
-        other => { println!("{other}") }
+        1 => {
+            println!("crit miss")
+        }
+        20 => {
+            println!("crit")
+        }
+        other => {
+            println!("{other}")
+        }
     }
+}
+
+/// if let обрабатывает только один шаблон
+pub fn _if_let_exm(x: Option<u8>) -> bool {
+    if let Some(mut z) = x {
+        z += 1;
+        println!("{z}");
+        true;
+    }
+    false
 }

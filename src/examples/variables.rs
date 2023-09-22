@@ -21,28 +21,26 @@
 /// переменные изначально иммутабельны
 /// let mut my_var = 10; изменяемая переменная
 
-fn variables_example() {
-    let my_float_64 = 10f64;
-    let my_float = 10.0;
-    let my_float_32: f32 = 10.0;
-    let my_bool = true;
-    let my_char = 'c';
-    my_char = 'd';
+pub fn exm() {
+    let _my_float_64 = 10f64;
+    let _my_float = 10.0;
+    let _my_float_32: f32 = 10.0;
+    let _my_bool = true;
+    let _my_char = 'c';
 
     // изменяемая переменная
-    let mut my_mutable_variable = 10;
-    my_mutable_variable = 5;
-    println!("{}", my_char);
+    let mut _my_mutable_variable = 10;
+    _my_mutable_variable = 5;
 
     // тип константы должен быть указан
-    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+    const _THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
     // tuple (type0, type1, typ2 .. typeN)
-    let tup = (1, 2f32, 'c', "s");
-    let tup2: (i32, char, str) = (3, 'g', "string");
+    let _tup = (1, 2f32, 'c', "s");
+    let _tup2: (i32, char, &str) = (3, 'g', "string");
 
     // array [type; N]
-    let arr = [1, 2, 3, 4, 5];
-    let arr2: [char; 3] = ['a', 'b', 'c'];
-    let arr3 = [0; 7]; // [0, 0, 0, 0, 0, 0, 0]
+    let _arr = [1, 2, 3, 4, 5];
+    let _arr2: [char; 3] = ['a', 'b', 'c'];
+    let _arr3 = [0; 7]; // [0, 0, 0, 0, 0, 0, 0]
 }

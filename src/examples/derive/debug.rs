@@ -8,14 +8,14 @@
 /// вместе с результирующим значением этого выражения и возвращает владение на значение.
 #[derive(Debug)]
 struct MyStruct {
-    pub name: String,
-    age: u8,
+    _name: String,
+    _age: u8,
 }
 
-fn debug_exm() {
+pub fn exm() {
     let ms = MyStruct {
-        name: String::from("Dima"),
-        age: 39,
+        _name: String::from("Dima"),
+        _age: 39,
     };
     println!("{:?}", ms);
     println!("{:#?}", ms);
